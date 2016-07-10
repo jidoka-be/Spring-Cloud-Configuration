@@ -1,0 +1,22 @@
+server:
+  port: 9000
+
+project:
+  description: Project for JIDOKA
+  company:
+    name: JIDOKA
+    description: Jidoka is a lean/Agile software services provider That focuses on good requirements, good design & development.  Technology focus is Java, .Net & Mobile
+    employeeCount: 10-49
+    website: http://www.jidoka.be
+    sector: Information & communication technology
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          content-type: application/json
+          destination: projects
+  sleuth:
+    sampler:
+      percentage: 2.0
