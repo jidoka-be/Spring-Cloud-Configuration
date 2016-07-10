@@ -1,0 +1,15 @@
+spring:
+  data:
+    elasticsearch:
+      properties:
+        path:
+          home: target/elastic
+          transport:
+            tcp:
+              connect_timeout: 120s
+  sleuth:
+    sampler:
+      percentage: 2.0
+
+server:
+  port: 9200
