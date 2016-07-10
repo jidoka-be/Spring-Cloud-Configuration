@@ -1,0 +1,14 @@
+server:
+  port: 9100
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: projects
+          group: projects
+          durableSubscription: true
+  sleuth:
+    sampler:
+      percentage: 2.0
