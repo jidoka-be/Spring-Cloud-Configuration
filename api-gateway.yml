@@ -1,0 +1,28 @@
+server:
+  port: 9999
+
+spring:
+  sleuth:
+    sampler:
+      percentage: 2.0
+
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    company:
+      path: /company/**
+      serviceId: customer-service
+      stripPrefix: false
+    employee:
+      path: /employee/**
+      serviceId: employee-service
+      stripPrefix: false
+    mbti:
+      path: /mbti/**
+      serviceId: mbti-service
+      stripPrefix: false
+    project:
+      path: /project/**
+      serviceId: customer-service
+      stripPrefix: false
